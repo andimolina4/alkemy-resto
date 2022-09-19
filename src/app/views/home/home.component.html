@@ -1,0 +1,23 @@
+<section class="principal-banner" id="principal-banner">
+  <div class="content">
+    <h2>Elegí Lo Mejor</h2>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Odio reprehenderit, dolore quia voluptatum esse cupiditate pariatur tempora obcaecati labore, dolores,
+        impedit quasi nihil provident soluta facere deleniti maiores laborum sapiente!
+    </p>
+    <a class="btn" href="#menu-list">Nuestros Menus</a>
+</div>
+</section>
+<section class="menu-list" id="menu-list">
+  <div class="container">
+    <div class="title-section">
+      <h2 class="title-text"><span>N</span>uestros <span>M</span>enus</h2>
+    </div>
+    <div *ngFor="let m of allMenu">
+      <app-menu [menu]="m"></app-menu>
+    </div>
+    <h3 *ngIf="allMenu.length == 0">Actualmente no se ha cargado ningun menu.</h3>
+  </div>
+</section>
+

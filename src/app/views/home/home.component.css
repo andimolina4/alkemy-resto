@@ -1,0 +1,60 @@
+/* BANNER SLIDER PRINCIPAL */
+
+.principal-banner{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(src/assets/slider.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.content{
+  max-width: 900px;
+  text-align: center;
+}
+
+.content h2{
+  font-size: 5em;
+  color: #FFF;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+}
+
+.content p{
+  font-size: 1em;
+  color: #FFF;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.40);
+}
+
+.btn{
+  font-size: 1em;
+  color: #FFF;
+  background: #286F6C;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  letter-spacing: 5px;
+  color: #FFF;
+  background: #286F6C;
+}
+
+section{
+  margin-bottom: 10%;
+}
+
+.menu-list h3{
+  margin-top: 3%;
+  text-align: center;
+  font-weight: 300;
+}

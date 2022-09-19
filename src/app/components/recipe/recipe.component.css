@@ -1,0 +1,95 @@
+.box{
+  width: 320px;
+  margin: 20px;
+  border: 15px solid #FFF;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.box .imgBox{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.box .imgBox img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.box .imgBox:hover img{
+  transform: scale(1.5);
+}
+
+.box:hover{
+  box-shadow: 0 5px 35px rgb(0 0 0 / 18%);
+}
+
+.box .text{
+  padding: 15px 0 5px;
+}
+
+.box .text h5{
+  font-weight: 300;
+  color: #111;
+}
+
+.btn{
+  font-size: 1em;
+  color: #FFF;
+  background: #286F6C;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  letter-spacing: 5px;
+  color: #FFF;
+  background: #286F6C;
+}
+
+.link{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete{
+  background: #454e4e;
+}
+
+.delete:hover{
+  background: #8d3124;
+}
+
+.text-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-detail p{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.vegetarian{
+  background: #286F6C;
+  position: absolute;
+  top: 10px;
+}
+
+.vegetarian p{
+  padding: 5px 10px;
+  margin: 0;
+  color: #FFF;
+}

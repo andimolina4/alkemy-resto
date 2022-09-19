@@ -1,0 +1,26 @@
+<div class="box">
+  <div class="imgBox">
+      <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+      <div *ngIf="recipe.vegetarian" class="vegetarian">
+        <p>Vegetariano</p>
+      </div>
+  </div>
+  <div class="text">
+      <h5>{{ recipe.title }}</h5>
+  </div>
+  <div class="text-detail">
+    <p>${{ recipe.pricePerServing }}</p>
+    <p>P.N: {{ recipe.healthScore }}</p>
+  </div>
+  <div class="link">
+    <a routerLink="recipe/716381" class="btn">Ver Mas</a>
+    <a *ngIf="!delete" (click)="open()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Agregar
+    </a>
+    <a *ngIf="delete" (click)="deleteItem()" type="button" class="btn btn-primary delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Quitar
+    </a>
+  </div>
+</div>
+
+

@@ -1,0 +1,57 @@
+<section class="product-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="img-box">
+          <img src="{{ resp.image }}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 col-xs-12">
+        <h1>{{ resp.title }}</h1>
+        <h3>${{ resp.pricePerServing }}</h3>
+        <p><b>Puntuación Nutricional:</b> {{ resp.healthScore }}</p>
+        <div class="summary" [innerHTML]="resp.summary">
+        </div>
+      </div>
+    </div>
+    <div class="ingredients">
+      <h2>Ingredientes</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Unidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of resp.nutrition.ingredients">
+            <td>{{ item.name }}</td>
+            <td>{{ item.amount }}</td>
+            <td>{{ item.unit }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nutrients">
+      <h2>Nutrientes</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Unidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of resp.nutrition.nutrients">
+            <td>{{ item.name }}</td>
+            <td>{{ item.amount }}</td>
+            <td>{{ item.unit }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+

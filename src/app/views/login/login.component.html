@@ -1,0 +1,25 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label for="Email" class="form-label">Email</label>
+      <input class="form-control" type="text" formControlName="email" placeholder="Nombre">
+      <div class="text text-danger text-end" *ngIf="showEmailError">
+        El campo no puede ser vacio
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="Password" class="form-label">Password</label>
+      <input formControlName="pass" type="password" class="form-control" id="Password">
+      <div class="text text-danger text-end" *ngIf="showPassError">
+        El campo no puede ser vacio
+      </div>
+    </div>
+    <button (click)="login()" type="submit" class="btn btn-primary mb-3">Login</button>
+  </form>
+
+</div>
+<div *ngIf="loading" class="loading">
+  <div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>

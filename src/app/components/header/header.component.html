@@ -1,0 +1,18 @@
+<header [ngClass]="isSticky ? 'sticky' : ''">
+  <div class="row">
+      <div class="col-md-2 col-xs-12 logo-box">
+          <div class="logo">
+              <a href="#"><span>A</span>lkemy <span>R</span>esto</a>
+          </div>
+      </div>
+      <div class="col-md-8 col-xs-12 navi">
+          <ul class="navigation">
+              <li><a class="active" routerLink="">Inicio</a></li>
+              <li><a routerLink="products">Productos</a></li>
+              <li><a (click)="logOut()">Cerrar Sesion</a></li>
+          </ul>
+      </div>
+      <div class="col-md-2 col-xs-0">
+      </div>
+  </div>
+</header>

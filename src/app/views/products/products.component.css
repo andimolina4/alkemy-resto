@@ -1,0 +1,40 @@
+.section{
+  margin-top: 100px;
+}
+
+
+ul.list-group li:hover,
+ul.list-group li:focus{
+  background: #286F6C;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.modal-footer{
+  align-items: end;
+  justify-content: space-between;
+}
+
+.btn{
+  font-size: 1em;
+  color: #FFF;
+  background: #286F6C;
+  display: inline-block;
+  padding: 6px 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  letter-spacing: 5px;
+  color: #FFF;
+  background: #286F6C;
+}
+
+.search{
+  margin: 2% auto;
+}

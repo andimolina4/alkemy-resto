@@ -1,0 +1,11 @@
+.title{
+  margin-top: 5%;
+}
+
+.detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2%;
+  border-bottom: 3px solid #38928e;
+}

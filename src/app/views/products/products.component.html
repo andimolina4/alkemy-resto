@@ -1,0 +1,55 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title-section">
+          <h2 class="title-text"><span>N</span>uestros <span>P</span>roductos</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row search">
+      <div class="col-12">
+        <form [formGroup]="formSearch">
+          <input type="text" formControlName="search" class="form-control" id="nameMenu" placeholder="Buscador...">
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs 12 col-md-6 col-lg-4" *ngFor="let r of resp.results">
+        <app-recipe [delete]="false" [recipe]="r" (ev)="receiveMessage($event)"></app-recipe>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="loading" class="loading">
+  <div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label class="form-label">Seleccione un Menu</label>
+        <p *ngIf="allMenusName.length == 0">Aun no ha cargado ningun menu.</p>
+        <ul *ngIf="allMenusName.length > 0" class="list-group">
+          <li *ngFor="let menu of allMenusName" class="list-group-item" (click)="addItemMenu(menu)">{{ menu }}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <form [formGroup]="form">
+          <label for="nameMenu" class="form-label">Agregar Nuevo Menu</label>
+          <input type="text" formControlName="nameMenu" class="form-control" id="nameMenu" placeholder="">
+        </form>
+        <a (click)="addMenuName()" class="btn">Agregar</a>
+      </div>
+    </div>
+  </div>
+</div>
+

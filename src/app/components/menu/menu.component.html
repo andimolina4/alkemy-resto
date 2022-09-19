@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="title col-12">
+    <h3>{{ menu.name }}</h3>
+  </div>
+  <div class="col-xs 12 col-md-6 col-lg-4" *ngFor="let m of menu.items">
+    <app-recipe [nameMenu]="menu.name" [delete]="true" [recipe]="m" (evDelete)="updateMenu($event)"></app-recipe>
+  </div>
+  <div class="detail">
+    <h4>Total: ${{ menu.price | number : '1.2-2'}}</h4>
+    <h4>Puntuación Nutricional: {{ menu.healtScore }}</h4>
+  </div>
+</div>
